@@ -8,8 +8,8 @@ public class Director extends Performer {
 		return moviesCount;
 	}
 
-	public void setMoviesCount(int moviesDirected) {
-		this.moviesCount = moviesDirected;
+	public void setMoviesCount(int moviesCount) {
+		this.moviesCount = moviesCount;
 	}
 
 }

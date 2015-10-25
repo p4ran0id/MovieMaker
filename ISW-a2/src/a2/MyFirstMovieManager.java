@@ -48,8 +48,7 @@ public static void main(String[] args) {
 	mov1.addPerformer(perf3);
 	
 	
-	// show Information
-	
+	// show Information	
 	mov1.showInformation();
 	mov1.allPerformer();
 	mov1.containsPerformer(perf1);
