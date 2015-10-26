@@ -1,54 +1,53 @@
-package a2;
-
-import a2.Movie;
-import a2.Performer;
-
-public class MyFirstMovieManager {
-	
+package com.moviemanager.a2;
 /**
- * @param args
+ * This class manages the Movies and the performer.
+ *
+ * @version 9/22/05
+ * @author Denis Davydov
  */
-public static void main(String[] args) {
+public class MyFirstMovieManager {
+    /**
+	 * Empty constructor to avoid checkstyle error.
+	 */
+	public void myFirstMovieManager() {
+		//Constructor for checkstyle-Error
+	}
+	/**
+	 * Main for testing.
+	 * @param args args
+	 */
+	public static void main(final String[] args) {
 	// Create Performers
-	Performer perf1 = new Performer();
-	Performer perf2 = new Performer();
-	Performer perf3 = new Performer();
-	Performer perf4 = new Performer();
-	
+	final Performer perf1 = new Performer();
+	final Performer perf2 = new Performer();
+	final Performer perf3 = new Performer();
+	final Performer perf4 = new Performer();
+	//set Performer
 	perf1.setFirstname("Robert");
 	perf1.setLastname("Downey jr.");
 	perf1.setGender(Gender.MALE);
-	
 	perf2.setFirstname("Scarlett");
 	perf2.setLastname("Johannson");
 	perf2.setGender(Gender.FEMALE);
 	perf2.setOutstanding(true);
-	
 	perf3.setFirstname("Jack");
 	perf3.setLastname("Black");
 	perf3.setGender(Gender.MALE);
-	
 	perf4.setFirstname("Bruce");
 	perf4.setLastname("Willis");
 	perf4.setGender(Gender.MALE);
-	
-	
-	// Create Director
-	Director dir1 = new Director ();
+	//Create Director
+	final Director dir1 = new Director();
 	dir1.setFirstname("Joss");
 	dir1.setGender(Gender.MALE);
 	dir1.setLastname("Whedon");
-
 	// Create a Movie
-	Movie mov1 = new Movie ("The Avengers", 120, dir1);
-	
+	final Movie mov1 = new Movie("The Avengers", 120, dir1);
 	//add Performer
 	mov1.addPerformer(perf1);
 	mov1.addPerformer(perf2);
 	mov1.addPerformer(perf3);
-	
-	
-	// show Information	
+	//show Information
 	mov1.showInformation();
 	mov1.allPerformer();
 	mov1.containsPerformer(perf1);
@@ -58,4 +57,3 @@ public static void main(String[] args) {
 	mov1.containsPerformer(perf4);
 	}
 }
-	
